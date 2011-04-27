@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Category:</b>
+  <%= @listing.category_id %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @listing.title %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%= @listing.body %>
+</p>
+
+<p>
+  <b>Submissiondate:</b>
+  <%= @listing.submissiondate %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @listing.email %>
+</p>
+
+<p>
+  <b>Contactphone:</b>
+  <%= @listing.contactphone %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @listing.status %>
+</p>
+
+
+<%= link_to 'Back', {:action => 'indexbycategory',:category_id => @listing.category_id} %>

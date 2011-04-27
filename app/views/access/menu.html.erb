@@ -1,0 +1,12 @@
+<% @page_title = "My Account" %>
+
+<div class="menu">
+  <h2>My Account Menu</h2>
+  <div class="identity">Logged in as:<%= session[:username] %></div>
+  <ul>
+    <li><%= link_to("Manage Listing",  {:controller => "listings", :action => 'indexbyuser'}) %></li>
+    <li><%= link_to("Manage Profile", {:controller => "users", :action => 'edit'}) %></li>
+    <li><%= link_to("New Listing", {:controller => "listings", :action => 'new'}) %></li>
+    <li><%= link_to("Logout", :action => 'logout') %></li>
+  </ul>
+</div>
