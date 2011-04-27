@@ -59,7 +59,7 @@ class ListingsController < ApplicationController
     @listing.user_id=session[:user_id]
     respond_to do |format|
       if @listing.save
-        format.html { redirect_to(@listing, :notice => 'Listing was successfully created.') }
+        format.html { redirect_to(:controller =>'access' ,:action => 'menu', :notice => 'Listing was successfully created.') }
         format.xml  { render :xml => @listing, :status => :created, :location => @listing }
       else
         format.html { render :action => "new" }
