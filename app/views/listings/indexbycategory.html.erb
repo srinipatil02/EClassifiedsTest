@@ -1,30 +1,18 @@
-<h1>Your Listings</h1>
+<h2>Listings</h2>
 
-<table>
-  <tr>
-    <th>Category</th>
-    <th>Title</th>
-    <th>Body</th>
-    <th>Submissiondate</th>
-    <th>Email</th>
-    <th>Contactphone</th>
-    <th>Status</th>
-    <th></th>
 
-  </tr>
+
 
 <% @listings.each do |listing| %>
-  <tr>
-    <td><%= listing.category_id %></td>
-    <td><%= listing.title %></td>
-    <td><%= listing.body %></td>
-    <td><%= listing.submissiondate %></td>
-    <td><%= listing.email %></td>
-    <td><%= listing.contactphone %></td>
-    <td><%= listing.status %></td>
-    <td><%= link_to 'Show', {:action => 'showlistings', :id => listing.id} %></td>
-  </tr>
-<% end %>
-</table>
+      <div>
+        <div><%= listing.category_id %></div>
+        <div style="font-weight:bold;"><%= listing.title %></div>
+        <div style="padding-top:10px"><%= listing.body %></div>
 
-<%= link_to("back",  {:controller => "categories", :action => 'listingindex'}) %>
+        <div><%= link_to 'Show Details', {:action => 'showlistings', :id => listing.id} %></div>
+    </div>
+<% end %>
+
+  <div style="padding-top:10px;font-weight:bold;">
+<%= link_to("Back",  {:controller => "categories", :action => 'listingindex'}) %>
+      </div>

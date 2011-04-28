@@ -1,12 +1,15 @@
-<h1>Listing categories</h1>
+<div style="font-weight:bold;padding-top:20px;padding-bottom:20px">
+  Welcome to EClassifieds, a free classified listing service.
+</div>
 
+<h3>Listing categories</h3>
+<span>Click on a category to view the listings under that category</span>
+
+<div>
+
+
+<div style="float:left;">
 <table>
-  <tr>
-    <th>Category name</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
 
 <% @categories.each do |category| %>
   <tr>
@@ -15,9 +18,24 @@
 <% end %>
 </table>
 
-<%= link_to("Register",  {:controller => "users", :action => 'new'}) %>
-<%= link_to("My Account",  {:controller => "access", :action => 'menu'}) %>
-<%= link_to("New Listing",  {:controller => "listings", :action => 'new'}) %>
+ </div>
+
+<div style="display:inline;float:right;width:300px;background-color:#ffffe0;">
+  <div style="padding-bottom:10px">
+        <%= link_to("Register",  {:controller => "users", :action => 'new'}) %>
+    </div>
+  <div style="padding-bottom:10px">
+        <%= link_to("My Account",  {:controller => "access", :action => 'menu'}) %>
+    </div>
+  <div style="padding-bottom:10px">
+        <%= link_to("New Listing",  {:controller => "listings", :action => 'new'}) %>
+    </div>
+</div>
+
+
+ </div>
+
+
 
 <br />
 
